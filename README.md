@@ -7,5 +7,5 @@
 - Using BEM Naming
 
 ## Demo & Preview
-- [Demo](https://hyunwoo1998.github.io/kspo-clone/index.html)<br>
+- [Demo](https://hyunwoo1998.github.io/KSPO-Clone/)<br>
 <img src="./img/preview.jpg">
