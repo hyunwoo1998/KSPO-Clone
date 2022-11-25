@@ -426,6 +426,10 @@
         display: block;
     }
 
+    &__inner {
+        height: calc(100% - 164px);
+    }
+
     &__list {
         padding: 15px;
         font-weight: 900;

@@ -10,10 +10,10 @@ $(document).ready(function () {
     $('body, .m-nav').toggleClass('active');
     if ($('body').hasClass('active')) {
       $('body').addClass('scroll--no');
-      $('.m-nav').addClass('scroll--yes');
+      $('.m-nav__inner').addClass('scroll--yes');
     } else {
       $('body').removeClass('scroll--no');
-      $('.m-nav').removeClass('scroll--yes');
+      $('.m-nav__inner').removeClass('scroll--yes');
     }
   });
 
