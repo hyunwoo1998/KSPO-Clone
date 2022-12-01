@@ -247,9 +247,8 @@ $(document).ready(function () {
   });
 
   $(".sites__itm").click(function () {
-    let idx = $(this).index();
-    $(".sites__itm").removeClass("active");
-    $(".sites__itm").eq(idx).addClass("active");
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
   });
 
   // 탑 스크롤

@@ -651,6 +651,8 @@ button {
 .btn--prev,
 .btn--next,
 .controls-notify {
+  width: 30px;
+  height: 30px;
   font-size: 2.4rem;
 }
 
@@ -906,7 +908,7 @@ button {
   overflow: hidden;
 }
 .swiper-room img {
-  height: 200px;
+  height: 240px;
   object-fit: cover;
   transition: scale 0.2s ease-in-out;
 }

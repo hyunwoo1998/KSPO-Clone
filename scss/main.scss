@@ -13,6 +13,8 @@
 .btn--prev,
 .btn--next,
 .controls-notify {
+    width: 30px;
+    height: 30px;
     font-size: $font-24;
 }
 
@@ -323,7 +325,7 @@
     }
 
     img {
-        height: 200px;
+        height: 240px;
         object-fit: cover;
         transition: scale .2s ease-in-out;
     }
