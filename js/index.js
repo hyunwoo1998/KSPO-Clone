@@ -82,8 +82,9 @@ $(document).ready(function () {
     bnrSwiper.autoplay.start();
   });
 
-  $(".scroll_down").click(function (event) {
-    event.preventDefault();
+  // 스크롤 다운
+  $(".scroll_down").click(function (e) {
+    e.preventDefault();
     $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
   });
 
@@ -226,7 +227,6 @@ $(document).ready(function () {
     }
   });
 
-
   // 협력 기관 슬라이드
   var partnerSwiper = new Swiper(".swiper-partner", {
     slidesPerView: 5,
@@ -247,7 +247,7 @@ $(document).ready(function () {
   });
 
   $(".sites__itm").click(function () {
-    $(this).siblings().removeClass("active");
+    $(".sites__itm").removeClass("active");
     $(this).addClass("active");
   });
 

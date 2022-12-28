@@ -104,13 +104,13 @@
     .swiper {
         &-btn {
             position: relative;
-            bottom: 400px;
+            bottom: 410px;
             left: 310px;
 
             .controls {
                 position: absolute;
                 left: 110px;
-                bottom: 3px;
+                bottom: 5px;
                 z-index: 9999;
 
                 .ico {
@@ -151,6 +151,11 @@
     z-index: 99;
     animation: motion 0.5s linear 0s infinite alternate;
     cursor: pointer;
+
+    &--text {
+        margin-top: 10px;
+        letter-spacing: -0.5px;
+    }
 }
 
 @keyframes motion {

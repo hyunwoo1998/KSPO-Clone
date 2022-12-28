@@ -546,6 +546,18 @@ html {
   font-size: 62.5%;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  height: 20%;
+  background: #666;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #eee;
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -609,6 +621,17 @@ button {
 
 .scroll--yes {
   overflow: auto;
+}
+.scroll--yes::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll--yes::-webkit-scrollbar-thumb {
+  height: 20%;
+  background: #666;
+  border-radius: 10px;
+}
+.scroll--yes::-webkit-scrollbar-track {
+  background: #eee;
 }
 
 .top-btn {
@@ -725,13 +748,13 @@ button {
 }
 .bnr .swiper-btn {
   position: relative;
-  bottom: 400px;
+  bottom: 410px;
   left: 310px;
 }
 .bnr .swiper-btn .controls {
   position: absolute;
   left: 110px;
-  bottom: 3px;
+  bottom: 5px;
   z-index: 9999;
 }
 .bnr .swiper-btn .controls .ico {
@@ -764,6 +787,10 @@ button {
   z-index: 99;
   animation: motion 0.5s linear 0s infinite alternate;
   cursor: pointer;
+}
+.scroll_down--text {
+  margin-top: 10px;
+  letter-spacing: -0.5px;
 }
 
 @keyframes motion {

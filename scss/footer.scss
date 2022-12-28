@@ -42,27 +42,27 @@
                     margin-left: 50px;
                     padding-right: 25px;
                     cursor: pointer;
-    
+
                     &::after {
                         content: "\f106";
                         position: absolute;
                         top: 3px;
                         right: 0;
                         font: var(--fa-font-solid);
+                        transition: transform .2s ease-in-out;
                     }
-    
+
                     &.active::after {
-                        content: "\f107";
+                        transform: rotate(180deg);
                     }
                 }
+
                 &-btn {
                     color: #cbcbcb;
                     font-size: $font-16;
                 }
             }
-            
         }
-
     }
 
     &__mid {
@@ -119,22 +119,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .isms-mark:hover .desc-popup {
     visibility: visible;

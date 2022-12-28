@@ -546,6 +546,18 @@ html {
   font-size: 62.5%;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  height: 20%;
+  background: #666;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #eee;
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -609,6 +621,17 @@ button {
 
 .scroll--yes {
   overflow: auto;
+}
+.scroll--yes::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll--yes::-webkit-scrollbar-thumb {
+  height: 20%;
+  background: #666;
+  border-radius: 10px;
+}
+.scroll--yes::-webkit-scrollbar-track {
+  background: #eee;
 }
 
 .top-btn {
