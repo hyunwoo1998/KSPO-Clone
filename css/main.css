@@ -916,7 +916,7 @@ button {
   flex-direction: column;
 }
 .swiper-room__link .category {
-  margin: 20px 0;
+  margin: 20px 0 10px;
   font-weight: 900;
   font-size: 1.4rem;
   color: #004288;
@@ -1038,10 +1038,12 @@ button {
 .service__desc--top {
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px dotted #ccc;
 }
 .service__desc--title {
+  display: block;
   font-size: 1.8rem;
+  margin-bottom: 25px;
 }
 .service__desc--text {
   font-size: 1.6rem;
@@ -1066,6 +1068,7 @@ button {
 }
 .service__desc--tel {
   position: relative;
+  margin-bottom: 10px;
 }
 .service__desc--tel::after {
   content: "\f2a0";

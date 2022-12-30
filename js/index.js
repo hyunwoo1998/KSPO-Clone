@@ -74,6 +74,7 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
   });
+
   $(".controls-bnr--stop").click(function () {
     bnrSwiper.autoplay.stop();
   });
@@ -103,8 +104,7 @@ $(document).ready(function () {
   });
 
   $('.tabs__itm').find('a').click(() => {
-    $('.tabs__itm').parent().find('li').removeClass('active');
-    $('.tabs__itm').find('a').parent().addClass('active');
+    $('.tabs__itm').parent().find('li').removeClass('active').find('a').parent().addClass('active');
   });
 
   $(".content__new .swiper-new").hide();
@@ -114,12 +114,9 @@ $(document).ready(function () {
 
   $(".content__new .tabs__itm").click(function () {
     let idx = $(this).index();
-    $(".content__new .tabs__itm").removeClass("active");
-    $(".content__new .tabs__itm").eq(idx).addClass("active");
-    $(".swiper-new").hide();
-    $(".swiper-new").eq(idx).show();
-    $(".content__new .more-btn").hide();
-    $(".content__new .more-btn").eq(idx).show();
+    $(".content__new .tabs__itm").removeClass("active").eq(idx).addClass("active");
+    $(".swiper-new").hide().eq(idx).show();
+    $(".content__new .more-btn").hide().eq(idx).show();
   });
 
   // 뉴스룸 슬라이드
@@ -127,7 +124,6 @@ $(document).ready(function () {
     slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
-    loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".room-btn--next",
       prevEl: ".room-btn--prev",
@@ -143,12 +139,9 @@ $(document).ready(function () {
 
   $(".content__room .tabs__itm2").click(function () {
     let idx = $(this).index();
-    $(".content__room .tabs__itm2").removeClass("active");
-    $(".content__room .tabs__itm2").eq(idx).addClass("active");
-    $(".swiper-room").hide();
-    $(".swiper-room").eq(idx).show();
-    $(".content__room .more-btn").hide();
-    $(".content__room .more-btn").eq(idx).show();
+    $(".content__room .tabs__itm2").removeClass("active").eq(idx).addClass("active");
+    $(".swiper-room").hide().eq(idx).show();
+    $(".content__room .more-btn").hide().eq(idx).show();
   });
 
   // 퀵메뉴 슬라이드
@@ -156,7 +149,6 @@ $(document).ready(function () {
     slidesPerView: 5,
     spaceBetween: 20,
     loop: true,
-    loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".quick-btn--next",
       prevEl: ".quick-btn--prev",
@@ -172,25 +164,24 @@ $(document).ready(function () {
 
   var serviceContent = new Swiper(".service-content", {
     loop: true,
-    loopFillGroupWithBlank: true,
     thumbs: {
       swiper: serviceMenu,
     },
   });
 
-  // 퀵메뉴 슬라이드
+  // SNS 슬라이드
   var snsSwiper = new Swiper(".swiper-sns", {
     slidesPerView: 3,
     spaceBetween: 10,
     loop: true,
-    loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".sns-btn--next",
       prevEl: ".sns-btn--prev",
     },
+    observer: true,
+    observeParents: true,
   });
 
-  // SNS 슬라이드
   $(".content__notice .swiper-sns").hide();
   $(".content__notice .swiper-sns.active").show();
 
@@ -206,7 +197,6 @@ $(document).ready(function () {
   var notifySwiper = new Swiper(".swiper-notify", {
     spaceBetween: 10,
     loop: true,
-    loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".notify-btn--next",
       prevEl: ".notify-btn--prev",
@@ -215,6 +205,8 @@ $(document).ready(function () {
       delay: 5000,
       disableOnInteraction: false,
     },
+    observer: true,
+    observeParents: true,
   });
 
   $(".controls-notify").click(function () {
@@ -231,11 +223,12 @@ $(document).ready(function () {
   var partnerSwiper = new Swiper(".swiper-partner", {
     slidesPerView: 5,
     loop: true,
-    loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".partner-btn--next",
       prevEl: ".partner-btn--prev",
     },
+    observer: true,
+    observeParents: true,
   });
 
   $(".controls-partner").click(function () {

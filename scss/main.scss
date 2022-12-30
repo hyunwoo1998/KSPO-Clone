@@ -304,12 +304,11 @@
         flex-direction: column;
 
         .category {
-            margin: 20px 0;
+            margin: 20px 0 10px;
             font-weight: 900;
             font-size: $font-14;
             color: $kspo-blue;
         }
-
 
         .excerpt {
             font-size: $font-18;
@@ -450,11 +449,13 @@
         &--top {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 1px solid black;
+            border-bottom: 1px dotted #ccc;
         }
 
         &--title {
+            display: block;
             font-size: $font-18;
+            margin-bottom: 25px;
         }
 
         &--text {
@@ -484,6 +485,7 @@
 
         &--tel {
             position: relative;
+            margin-bottom: 10px;
 
             &::after {
                 content: "\f2a0";
